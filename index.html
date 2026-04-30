@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>💜 A Little Something For You</title>
+  <meta name="description" content="A special birthday surprise for someone truly special.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════ BACKGROUND SLIDESHOW ═══════════════ -->
+  <div id="slideshow">
+    <div class="slide active" style="background-image: url('image1.jpg')"></div>
+    <div class="slide" style="background-image: url('image2.jpg')"></div>
+    <div class="slide" style="background-image: url('image3.jpg')"></div>
+    <div class="slide" style="background-image: url('image4.jpg')"></div>
+    <div class="slideshow-overlay"></div>
+  </div>
+
+  <!-- ═══════════════ PARTICLES ═══════════════ -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ═══════════════ CONFETTI ═══════════════ -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ═══════════════ SCENE 1: THE QUESTION ═══════════════ -->
+  <section id="scene-question" class="scene">
+    <div class="question-container glass-card">
+      <div class="purple-icon">💜</div>
+      <p class="intro-text" id="intro-text"></p>
+      <div class="question-wrapper" id="question-wrapper">
+        <h1 class="main-question" id="main-question"></h1>
+      </div>
+      <div class="buttons-area" id="buttons-area">
+        <button id="btn-yes" class="btn btn-yes" onclick="handleYes()">
+          YES <span class="btn-emoji">💜</span>
+        </button>
+        <button id="btn-no" class="btn btn-no" onclick="handleNo()">
+          NO <span class="btn-emoji">😈</span>
+        </button>
+      </div>
+      <p class="tease-msg" id="tease-msg"></p>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SCENE 2: THE REVEAL ═══════════════ -->
+  <section id="scene-reveal" class="scene scene-hidden">
+    <div class="reveal-container">
+
+      <!-- Cinematic typing message -->
+      <div class="cinematic-block" id="cinematic-block">
+        <div class="typing-line" id="typing-line-1"></div>
+        <div class="typing-line" id="typing-line-2"></div>
+        <div class="typing-line" id="typing-line-3"></div>
+        <div class="typing-line" id="typing-line-4"></div>
+        <div class="typing-line" id="typing-line-5"></div>
+      </div>
+
+      <!-- Final Birthday Message -->
+      <div class="final-message" id="final-message">
+        <div class="birthday-crown">👑</div>
+        <h1 class="birthday-title">
+          <span class="word" style="--i:0">Happy</span>
+          <span class="word" style="--i:1">Birthday,</span>
+          <br>
+          <span class="word highlight" style="--i:2">My</span>
+          <span class="word highlight" style="--i:3">Purple</span>
+          <span class="word highlight" style="--i:4">Person</span>
+          <span class="word" style="--i:5">💜</span>
+        </h1>
+        <p class="birthday-sub">You make this world a little more purple,<br>and a whole lot more fun.</p>
+        <div class="heart-burst" id="heart-burst"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ HIDDEN EASTER EGG ═══════════════ -->
+  <div id="easter-egg" class="easter-egg">
+    <p>psst… you found the secret spot 🤫</p>
+    <p class="easter-sub">you're literally the best human I know. don't tell anyone I said that.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
